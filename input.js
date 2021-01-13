@@ -35,7 +35,19 @@ const handleUserInput = function(key) {
 
   }else if (key === 'd'){
 
-    connection.write('Move: right')
+    connection.write('Say: right')
+
+  }else if (key === 'p'){
+
+    connection.write('Say: LHL')
+
+  }else if (key === 'l'){
+
+    connection.write('Say: FTW')
+
+  }else if (key === 'm'){
+
+    connection.write('Say: JOB')
 
   } 
 
