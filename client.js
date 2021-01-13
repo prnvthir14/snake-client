@@ -12,16 +12,30 @@ const connect = function () {
   });
 
   conn.setEncoding('utf8');
-
-  return conn;
+  //console.log(conn)
+  
   
   //event handler to handle incomming data 
-  client.on('data', () => {
+  conn.on('data', (data) => {
 
     // client.write(`${data}`)
-    console.log(`${data}`)
+    console.log('Server says:',data)
 
   })
+
+  //event handler to add name to snake
+  let name = 'PVT'
+  conn.on('connect', () => {
+    
+    console.log('PT Successfully connected to game serve')
+    conn.write(`Name: ${name}`)
+
+ 
+  })
+
+
+  //
+  return conn;
 
 }
 
