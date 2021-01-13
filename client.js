@@ -24,12 +24,14 @@ const connect = function () {
   })
 
   //event handler to add name to snake
-  let name = 'PVT'
+  let name = 'KKO'
   conn.on('connect', () => {
     
     console.log('PT Successfully connected to game serve')
     conn.write(`Name: ${name}`)
 
+    //now adding movement to the snake
+    //conn.write('Move: up')
  
   })
 
